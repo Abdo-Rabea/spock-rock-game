@@ -87,13 +87,13 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .result-text {
   font-size: 40px;
   margin: unset;
-  margin-top: 20px;
-  margin-bottom: 40px;
 }
 
 /* Media Query: Large Smartphone (Vertical) */
