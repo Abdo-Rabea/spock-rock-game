@@ -1,3 +1,5 @@
+import { startConfetti, stopConfetti } from "./confetti.js";
+
 const playerScoreEl = document.getElementById("playerScore");
 const playerChoiceEl = document.getElementById("playerChoice");
 const computerScoreEl = document.getElementById("computerScore");
@@ -36,7 +38,7 @@ function getComputerChoice() {
 function updatePlayerChoice(playerChoice, element) {
   // update choice element
   playerChoiceEl.textContent = playerChoice
-    ? ` --- ${choices[playerChoice].name}`
+    ? `${choices[playerChoice].name}`
     : "";
 
   // remove selected from all elements
@@ -50,7 +52,7 @@ function updatePlayerChoice(playerChoice, element) {
 function updateComputerChoice(computerChoice) {
   // update choice element
   computerChoiceEl.textContent = computerChoice
-    ? ` --- ${choices[computerChoice].name}`
+    ? `${choices[computerChoice].name}`
     : "";
 
   // remove selected from all elements except selected one
@@ -91,11 +93,13 @@ function computerWins() {
   computerScore++;
   setComputerScore(computerScore);
   stopConfetti();
+  // removeConfetti();
   updateResultMessage("You Lost!");
 }
 
 function tie() {
   stopConfetti();
+  // removeConfetti(); // it is removed instancly but it is better without it
   updateResultMessage("It's a Tie.");
 }
 // updates the scores according to the winner

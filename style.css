@@ -47,12 +47,16 @@ h1 {
 
 .player-container {
   margin: 50px;
+  position: relative;
 }
 
 h2 {
   margin-bottom: 20px;
 }
-
+h2 span:last-of-type {
+  position: absolute;
+  right: 0;
+}
 .far {
   font-size: 50px;
   margin-right: 40px;
