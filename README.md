@@ -37,6 +37,8 @@ The winner is determined by the following rules:
 
 ---
 ## Preview
+[demo](https://abdo-rabea.github.io/spock-rock-game/)
+
 ![screen](./screen.png)
 
 ---
